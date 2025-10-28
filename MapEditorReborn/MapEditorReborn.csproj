@@ -8,22 +8,20 @@
     <AssemblyName>MapEditorReborn</AssemblyName>
     <RootNamespace>MapEditorReborn</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="UnityEngine" HintPath="$(EXILED_REFERENCES)\UnityEngine.dll" />
-    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" HintPath="$(EXILED_REFERENCES)\UnityEngine.AnimationModule.dll" SpecificVersion="False" />
-    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" SpecificVersion="False" HintPath="$(EXILED_REFERENCES)\UnityEngine.CoreModule.dll" />
-    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" SpecificVersion="False" HintPath="$(EXILED_REFERENCES)\UnityEngine.AssetBundleModule.dll" />
-    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" SpecificVersion="False" HintPath="$(EXILED_REFERENCES)\UnityEngine.PhysicsModule.dll" />
     <Reference Include="Mirror" HintPath="$(EXILED_REFERENCES)\Mirror.dll" />
     <Reference Include="Assembly-CSharp-firstpass" HintPath="$(EXILED_REFERENCES)\Assembly-CSharp-firstpass.dll" />
     <Reference Include="YamlDotNet" HintPath="$(EXILED_REFERENCES)\YamlDotNet.dll" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExMod.Exiled" Version="9.0.1" />
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+    <PackageReference Include="Exiled.Dev.References" Version="1.0.4" />
+    <PackageReference Include="ExMod.Exiled" Version="9.10.0" />
+    <PackageReference Include="Lib.Harmony" Version="2.4.1" />
   </ItemGroup>
 
 </Project>

@@ -4,9 +4,9 @@
     using Interactables.Interobjects.DoorUtils;
     using UnityEngine;
     using YamlDotNet.Serialization;
-    using KeycardPermissions = Interactables.Interobjects.DoorUtils.KeycardPermissions;
+    using KeycardPermissions = Exiled.API.Enums.KeycardPermissions;
 
-    public class VanillaDoorSerializable : DoorSerializable
+  public class VanillaDoorSerializable : DoorSerializable
     {
         public VanillaDoorSerializable()
         {

@@ -10,7 +10,8 @@ namespace MapEditorReborn.API.Features.Serializable
     using System;
     using System.Collections.Generic;
     using Enums;
-    using Interactables.Interobjects.DoorUtils;
+  using Exiled.API.Enums;
+  using Interactables.Interobjects.DoorUtils;
     using Utf8Json;
 
     public class LockerSerializable : SerializableObject
@@ -21,7 +22,7 @@ namespace MapEditorReborn.API.Features.Serializable
 
         public LockerSerializable(SchematicBlockData block)
         {
-            LockerType = (LockerType)Enum.Parse(typeof(LockerType), block.Properties["LockerType"].ToString());
+            LockerType = (Exiled.API.Enums.LockerType)Enum.Parse(typeof(Exiled.API.Enums.LockerType), block.Properties["LockerType"].ToString());
             Chambers = JsonSerializer.Deserialize<Dictionary<int, List<LockerItemSerializable>>>(JsonSerializer.Serialize(block.Properties["Chambers"]));
             AllowedRoleTypes = JsonSerializer.Deserialize<List<string>>(JsonSerializer.Serialize(block.Properties["AllowedRoleTypes"]));
             ShuffleChambers = bool.Parse(block.Properties["ShuffleChambers"].ToString());
@@ -31,7 +32,7 @@ namespace MapEditorReborn.API.Features.Serializable
             Chance = float.Parse(block.Properties["Chance"].ToString());
         }
 
-        public LockerType LockerType { get; set; }
+        public Exiled.API.Enums.LockerType LockerType { get; set; }
 
         public Dictionary<int, List<LockerItemSerializable>> Chambers { get; set; } = new ()
         {
